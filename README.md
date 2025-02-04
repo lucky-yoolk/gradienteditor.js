@@ -18,7 +18,7 @@ Manage Color stops, Direction, show/hide UI elements, target multiple elements t
 ### Using NPM
 
 ```sh
-<script src="npm install gradienteditor.js"></script>
+npm install gradienteditor.js
 ```
 
 Then import it in your JavaScript:
