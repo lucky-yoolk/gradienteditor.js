@@ -1,3 +1,5 @@
+![alt text](https://yoolk.ninja/wp-content/uploads/2025/02/Capture-decran-2025-02-04-a-12.19.35.png)
+
 # gradienteditor.js
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
