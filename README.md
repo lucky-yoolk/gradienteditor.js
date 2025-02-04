@@ -110,4 +110,4 @@ gradientEditor.removeColorStop(1);
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/lucky-yoolk/gradienteditor.js/blob/main/README.md) file for details.
