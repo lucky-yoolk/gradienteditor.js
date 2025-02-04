@@ -12,7 +12,7 @@ Manage Color stops, Direction, show/hide UI elements, target multiple elements t
 ### Using CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js/gradient-editor.css" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js/gradient-editor.css">
 <script src="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js/gradient-editor.js"></script>
 ```
 
