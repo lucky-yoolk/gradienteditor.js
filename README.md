@@ -3,9 +3,9 @@
 
 **GradientEditor.js** is a lightweight JavaScript plugin designed to provide an intuitive UI for creating and managing CSS gradients. It supports multiple gradient color stops, directional adjustments, and pre-defined gradient templates.
 
-## Features
+## Demo
 
-Manage Color stops, Direction, show/hide UI elements, target multiple elements to preview...
+[https://yoolk.ninja/projects/gradient-editor-vanilla-javascript-plugin/](https://yoolk.ninja/projects/gradient-editor-vanilla-javascript-plugin/)
 
 ##  Installation
 
