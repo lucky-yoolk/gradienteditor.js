@@ -1,7 +1,7 @@
 # gradienteditor.js
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**GradientEditor.js** is a lightweight JavaScript plugin designed to provide an intuitive UI for creating and managing CSS gradients. It supports multiple gradient color stops, directional adjustments, and pre-defined gradient templates.
+**GradientEditor.js** is a lightweight JavaScript plugin designed to provide an intuitive UI for creating and managing CSS gradients. It supports multiple gradient color stops, directional adjustments, and pre-defined gradient templates (gradient templates from [uigradients.com](https://uigradients.com/)).
 
 ## Demo
 
