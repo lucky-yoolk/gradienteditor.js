@@ -5,7 +5,7 @@
 
 ## Features
 
-Manage Color stops, Direction, show/hide UI elements, target multiple elements to preview
+Manage Color stops, Direction, show/hide UI elements, target multiple elements to preview...
 
 ##  Installation
 
