@@ -14,8 +14,8 @@
 ### Using CDN
 
 ```html
-<link href="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js/gradient-editor.css">
-<script src="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js/gradient-editor.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js@main/gradient-editor.css">
+<script src="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js@main/gradient-editor.min.js"></script>
 ```
 
 ### Using NPM
