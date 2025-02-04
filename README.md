@@ -66,6 +66,9 @@ const gradientEditor = new GradientEditor("#gradient-input", {
   ],
   previewContainer: [".preview-box", "#background"],
   showInput: true,
+  showDirectionToggle: true,
+  showDirectionDegrees: true,
+  showTemplates: true
 });
 ```
 
