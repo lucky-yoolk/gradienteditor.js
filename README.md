@@ -34,6 +34,7 @@ import GradientEditor from "gradienteditor.js";
 
 ```js
 const gradientEditor = new GradientEditor("#gradient-input", {
+  defaultValue: "linear-gradient(to right, #6B6B83, #A94B6B)",
   previewContainer: ".preview-box",
   previewContainer: ["#output-1", "#output-2"],
   showInput: false,
