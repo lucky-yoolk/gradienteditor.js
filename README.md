@@ -11,7 +11,7 @@
 
 ##  Installation
 
-### Using CDN
+### Manually
 
 ```html
 <link href="/gradient-editor.css">
