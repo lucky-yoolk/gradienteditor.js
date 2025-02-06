@@ -34,6 +34,7 @@ class GradientEditor {
 			showDirectionDegrees: true,
 			showTemplates: true,
 			previewContainer: null,
+			outputCss: null,
 			...options,
 		};
 
@@ -322,9 +323,7 @@ class GradientEditor {
 	
 		console.log("UI created for:", this.input);
 	}
-
-
-
+	
 	applyDefaultGradient() {
 		this.colorStops = this.parseGradientString(this.gradient) || this.options.defaultColorStops;
 		this.updateGradientForSlider();
@@ -390,12 +389,21 @@ class GradientEditor {
 	}
 
 	updatePreview() {
+		const gradientCss = this.createGradientString();
+		
+		// Apply to all preview elements
 		if (this.previewElements.length > 0) {
 			this.previewElements.forEach(element => {
-				element.style.background = this.gradient;
+				element.style.background = gradientCss;
 			});
 		}
-		this.input.value = this.gradient;
+		// Update input value
+		this.input.value = gradientCss;
+		
+		// Generate full CSS output for textarea if specified
+		if (this.cssOutputElement) {
+			this.cssOutputElement.value = this.generateFullCssOutput();
+		}
 	}
 
 	createGradientString() {
@@ -403,6 +411,23 @@ class GradientEditor {
 			.map(({ color, position }) => `${color} ${position.toFixed(1)}%`)
 			.join(", ")})`;
 	}
+	
+	generateFullCssOutput() {
+		const direction = this.options.defaultDirection.includes("deg") 
+			? this.options.defaultDirection 
+			: this.directionToDegrees(this.options.defaultDirection);
+		
+		const gradientStops = this.colorStops.map(({ color, position }) => `${color} ${position}%`).join(", ");
+		
+		const gradientCss = `linear-gradient(${direction}, ${gradientStops})`;
+	
+		return `background: ${this.colorStops[0].color};
+	background: -moz-${gradientCss};
+	background: -webkit-${gradientCss};
+	background: ${gradientCss};
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${this.colorStops[0].color}", endColorstr="${this.colorStops[this.colorStops.length - 1].color}", GradientType=1);`;
+	}
+
 
 	addColorStop(color, position) {
 		this.colorStops.push({ color, position });
@@ -708,6 +733,20 @@ class GradientEditor {
 		this.updateGradientDirection(this.options.defaultDirection);
 		this.updatePreview();
 		this.initializeDirectionDot(); // Update dot position
+	}
+	
+	directionToDegrees(direction) {
+		const mapping = {
+			"to top": "0deg",
+			"to right": "90deg",
+			"to bottom": "180deg",
+			"to left": "270deg",
+			"to top left": "315deg",
+			"to top right": "45deg",
+			"to bottom left": "225deg",
+			"to bottom right": "135deg"
+		};
+		return mapping[direction] || direction;
 	}
 	
 	/**
