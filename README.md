@@ -15,7 +15,7 @@
 
 ```html
 <link href="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js@main/gradient-editor.css">
-<script src="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js@main/gradient-editor.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lucky-yoolk/gradienteditor.js@main/gradient-editor.js"></script>
 ```
 
 ### Using NPM
