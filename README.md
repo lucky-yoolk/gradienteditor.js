@@ -42,22 +42,24 @@ const gradientEditor = new GradientEditor("#gradient-input", {
   showInput: false,
   showDirectionToggle: true,
   showDirectionDegrees: true,
-  showTemplates: true
+  showTemplates: true,
+  outputCss: false
 });
 ```
 
 ### Options
 
-| Option                | Type            | Default Value                                      | Description |
-|----------------------|----------------|--------------------------------------------------|-------------|
-| `defaultDirection`   | `string`        | `"to right"`                                     | The default gradient direction. |
-| `defaultColorStops`  | `Array<Object>` | `[{ color: "rgba(255, 0, 0, 1)", position: 0 }, { color: "rgba(0, 0, 255, 1)", position: 100 }]` | Initial color stops. |
-| `defaultValue`       | `string`        | `null`                                           | Custom default gradient value. |
-| `showInput`          | `boolean`       | `false`                                          | Whether to show the raw gradient input field. |
-| `showDirectionToggle`| `boolean`       | `true`                                           | Toggle for preset directions. |
-| `showDirectionDegrees` | `boolean`    | `true`                                           | Enable custom angle selection. |
-| `showTemplates`      | `boolean`       | `true`                                           | Show pre-made gradient templates. |
-| `previewContainer`   | `string/array`  | `null`                                           | Apply gradient to an element |      
+| Option                | Type            | Default Value                                    | Description |
+|-----------------------|-----------------|--------------------------------------------------|-------------|
+| `defaultDirection`    | `string`        | `"to right"`                                     | The default gradient direction. |
+| `defaultColorStops`   | `Array<Object>` | `[{ color: "rgba(255, 0, 0, 1)", position: 0 }, { color: "rgba(0, 0, 255, 1)", position: 100 }]` | Initial color stops. |
+| `defaultValue`        | `string`        | `null`                                           | Custom default gradient value. |
+| `showInput`           | `boolean`       | `false`                                          | Whether to show the raw gradient input field. |
+| `showDirectionToggle` | `boolean`       | `true`                                           | Toggle for preset directions. |
+| `showDirectionDegrees`| `boolean`       | `true`                                           | Enable custom angle selection. |
+| `showTemplates`       | `boolean`       | `true`                                           | Show pre-made gradient templates. |
+| `previewContainer`    | `string/array`  | `null`                                           | Apply gradient to an element |      
+| `outputCss`           | `string/array`  | `null`                                           | Output gradient Css as text to an element |      
 
 
 ### Example with Advanced Configuration
@@ -72,7 +74,8 @@ const gradientEditor = new GradientEditor("#gradient-input", {
   showInput: true,
   showDirectionToggle: true,
   showDirectionDegrees: true,
-  showTemplates: true
+  showTemplates: true,
+  outputCss: false
 });
 ```
 
