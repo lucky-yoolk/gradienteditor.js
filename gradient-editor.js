@@ -1,5 +1,5 @@
 /*
- * GradientEditor v1.0.0
+ * GradientEditor v1.0.1
  * https://github.com/lucky-yoolk/gradienteditor.js
  * Licensed under the MIT license
  */
@@ -49,7 +49,10 @@ class GradientEditor {
 		} else {
 			this.previewElements = [];
 		}
-
+		
+		// Find the CSS output textarea if provided
+		this.cssOutputElement = this.options.outputCss ? document.querySelector(this.options.outputCss) : null;
+		
 		this.colorStops = [];
 		this.init();
 	}
@@ -402,7 +405,8 @@ class GradientEditor {
 		
 		// Generate full CSS output for textarea if specified
 		if (this.cssOutputElement) {
-			this.cssOutputElement.value = this.generateFullCssOutput();
+			console.debug();
+			this.cssOutputElement.textContent = this.generateFullCssOutput();
 		}
 	}
 
@@ -422,10 +426,10 @@ class GradientEditor {
 		const gradientCss = `linear-gradient(${direction}, ${gradientStops})`;
 	
 		return `background: ${this.colorStops[0].color};
-	background: -moz-${gradientCss};
-	background: -webkit-${gradientCss};
-	background: ${gradientCss};
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${this.colorStops[0].color}", endColorstr="${this.colorStops[this.colorStops.length - 1].color}", GradientType=1);`;
+background: -moz-${gradientCss};
+background: -webkit-${gradientCss};
+background: ${gradientCss};
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${this.colorStops[0].color}", endColorstr="${this.colorStops[this.colorStops.length - 1].color}", GradientType=1);`;
 	}
 
 
